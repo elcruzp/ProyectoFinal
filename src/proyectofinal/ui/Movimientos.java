@@ -1,17 +1,13 @@
 package proyectofinal.ui;
 
+import javax.swing.table.DefaultTableModel;
+
 public class Movimientos extends javax.swing.JFrame {
 
-    private String Saldo;
     public Movimientos() {
         initComponents();
     }
     
-    public void setDato(String Saldo){
-       this.Saldo = Saldo;
-       lblSaldo.setText(Saldo);
-    }
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -39,7 +35,7 @@ public class Movimientos extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         lblSaldo = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTableMovimientos = new javax.swing.JTable();
         jPanel5 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -267,8 +263,8 @@ public class Movimientos extends javax.swing.JFrame {
         lblSaldo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSaldo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTable1.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTableMovimientos.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        jTableMovimientos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -285,7 +281,7 @@ public class Movimientos extends javax.swing.JFrame {
                 "Detalle", "Movimientos", "Saldo"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jTableMovimientos);
 
         javax.swing.GroupLayout jPanelOpcionesLayout = new javax.swing.GroupLayout(jPanelOpciones);
         jPanelOpciones.setLayout(jPanelOpcionesLayout);
@@ -431,6 +427,11 @@ public class Movimientos extends javax.swing.JFrame {
 
     private void btnEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnterActionPerformed
         // Boton de ENTER
+        // Se crea un objeto de tipo jTable para los elementos
+        DefaultTableModel Historial = (DefaultTableModel) jTableMovimientos.getModel();
+        
+        // Código para agregar una nueva fila
+
     }//GEN-LAST:event_btnEnterActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
@@ -466,7 +467,7 @@ public class Movimientos extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanelOpciones;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTableMovimientos;
     private javax.swing.JLabel lblSaldo;
     private javax.swing.JLabel lblUsuario;
     // End of variables declaration//GEN-END:variables

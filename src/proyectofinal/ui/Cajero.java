@@ -5,7 +5,7 @@ public class Cajero extends javax.swing.JFrame {
     public Cajero() {
         initComponents();
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

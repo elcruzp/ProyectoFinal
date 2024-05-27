@@ -58,23 +58,21 @@ public class Login extends javax.swing.JFrame {
 
         jPanelBarra.setBackground(new java.awt.Color(21, 57, 73));
 
-        lblImagen.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
         javax.swing.GroupLayout jPanelBarraLayout = new javax.swing.GroupLayout(jPanelBarra);
         jPanelBarra.setLayout(jPanelBarraLayout);
         jPanelBarraLayout.setHorizontalGroup(
             jPanelBarraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBarraLayout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
-                .addComponent(lblImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
+            .addGroup(jPanelBarraLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblImagen, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanelBarraLayout.setVerticalGroup(
             jPanelBarraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelBarraLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(lblImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(178, Short.MAX_VALUE))
+                .addGap(20, 20, 20)
+                .addComponent(lblImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(172, Short.MAX_VALUE))
         );
 
         jPanelBg.add(jPanelBarra, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 210, 360));
@@ -236,30 +234,27 @@ public class Login extends javax.swing.JFrame {
             txtUsuario.setText("");
             jPassword.setText("");
         } else {
-            if (Usuario1.equalsIgnoreCase("Juan") && Password.equals("1234")) {
+            if (txtUsuario.getText().equalsIgnoreCase(Usuario1) && Password.equals("1234")) {
                 Menu Master = new Menu();
                 Master.setVisible(true);
                 Master.setLocationRelativeTo(null);
                 this.dispose();
-                
-                double Saldo = 2000000;
+
                 
 
-            } else if (Usuario2.equalsIgnoreCase("Dharyn") && Password.equals("1234")){
+            } else if (txtUsuario.getText().equalsIgnoreCase(Usuario2) && Password.equals("1234")){
                 Menu Master = new Menu();
                 Master.setVisible(true);
                 Master.setLocationRelativeTo(null);
                 this.dispose();
+
                 
-                double Saldo = 250000;
-                
-            } else if (Usuario3.equalsIgnoreCase("Andres") && Password.equals("1234")){
+            } else if (txtUsuario.getText().equalsIgnoreCase(Usuario3) && Password.equals("1234")){
                 Menu Master = new Menu();
                 Master.setVisible(true);
                 Master.setLocationRelativeTo(null);
                 this.dispose();
-                
-                double Saldo = 3000000;
+ 
             } else {
                 JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos.", "Error", JOptionPane.ERROR_MESSAGE);
                 txtUsuario.setText("");
